@@ -66,7 +66,7 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   holiday_hash.each do |k_season, v_holiday|
     v_holiday.select do |k_holiday, v_stuff|
-      [v_stuff] == "BBQ"
+      k_holiday[v_stuff] == "BBQ"
     end
   end
 end
